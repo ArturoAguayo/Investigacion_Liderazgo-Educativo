@@ -1,0 +1,117 @@
+/* 1. DISEÑO GENERAL (El cuerpo de la página) */
+body {
+    /* Usamos una tipografía moderna y muy legible, ideal para leer reportes largos */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Un color de fondo ligeramente gris para que no canse la vista */
+    background-color: #f4f7f6;
+    
+    /* Color de texto gris oscuro (el negro puro cansa la vista en pantallas) */
+    color: #333333;
+    
+    /* Quitamos los márgenes por defecto del navegador */
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. EL ENCABEZADO (La primera impresión) */
+header {
+    /* Un azul profundo y elegante */
+    background-color: #002349; 
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    /* Un sutil sombreado para darle profundidad */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* El título principal dentro del encabezado */
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* 3. EL CONTENIDO PRINCIPAL (Donde irán los avances) */
+main {
+    /* Centramos el contenido y evitamos que sea demasiado ancho en pantallas grandes */
+    max-width: 800px;
+    margin: 40px auto;
+    
+    /* Le damos un fondo blanco tipo "hoja de papel" */
+    background-color: #ffffff;
+    padding: 40px;
+    
+    /* Bordes ligeramente redondeados para un toque moderno */
+    border-radius: 8px;
+    
+    /* Sombra suave para separar el "papel" del fondo gris */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Damos color a los subtítulos para que combinen con el encabezado */
+h2 {
+    color: #2b6cb0;
+    border-bottom: 2px solid #957C3D;
+    padding-bottom: 10px;
+}
+
+/* Hacemos que los párrafos tengan buen espacio para respirar */
+p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* 4. EL PIE DE PÁGINA */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #718096;
+}
+    /* 5. MENÚ DE NAVEGACIÓN */
+nav {
+    /* Un tono de azul ligeramente más claro para contrastar con el encabezado */
+    background-color: #2b6cb0; 
+}
+
+/* Quitamos las viñetas y alineamos los elementos de forma horizontal */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los botones en la pantalla */
+}
+
+/* Diseño de cada botón del menú */
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    padding: 15px 30px; /* Espacio para que el botón sea fácil de hacer clic */
+    font-weight: bold;
+    font-size: 1.05em;
+    transition: background-color 0.3s ease; /* Efecto suave de transición */
+}
+
+/* Efecto visual cuando el usuario pasa el ratón sobre un botón */
+nav a:hover {
+    background-color: #1a365d; /* Cambia al azul oscuro del encabezado */
+}
+
+/* Estilo para resaltar en qué página se encuentra el usuario actualmente */
+nav a.activo {
+    background-color: #ffffff;
+    color: #1a365d;
+    border-top: 3px solid #e2e8f0;
+}
+    /* 6. DISEÑO DE LA TABLA DE DATOS (iframe) */
+iframe {
+    width: 100%; /* Hace que la tabla ocupe todo el ancho disponible */
+    height: 700px; /* Le da una buena altura para leer los datos */
+    border: none; /* Quita el borde feo por defecto */
+    border-radius: 8px; /* Redondea las esquinas para que combine con el diseño */
+}
+    
+    
