@@ -14,21 +14,36 @@ body {
     padding: 0;
 }
 
-/* 2. EL ENCABEZADO (La primera impresión) */
+/* 2. EL ENCABEZADO (La primera impresión con logotipos) */
 header {
-    /* Un azul profundo y elegante */
     background-color: #002349; 
     color: white;
-    text-align: center;
-    padding: 50px 20px;
-    /* Un sutil sombreado para darle profundidad */
+    
+    /* Activamos Flexbox para alinear los logos y el texto en una sola fila */
+    display: flex;
+    justify-content: space-between; /* Distribuye espacio: izquierda, centro y derecha */
+    align-items: center; /* Centra verticalmente los logos con el texto */
+    padding: 30px 40px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* El título principal dentro del encabezado */
+/* El contenedor del texto del título */
+.header-texto {
+    text-align: center;
+    flex-grow: 1; /* Hace que el texto use todo el espacio central disponible */
+    padding: 0 20px;
+}
+
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2.2em; /* Reducimos ligeramente para dar espacio a los logos */
+}
+
+/* Control de tamaño para ambos logotipos */
+.logo-encabezado {
+    height: 80px; /* Ajusta este número (ej. 90px o 100px) según qué tan grandes sean tus logos */
+    width: auto;  /* Mantiene la proporción original de la imagen para que no se deforme */
+    object-fit: contain;
 }
 
 /* 3. EL CONTENIDO PRINCIPAL (Donde irán los avances) */
@@ -113,5 +128,43 @@ iframe {
     border: none; /* Quita el borde feo por defecto */
     border-radius: 8px; /* Redondea las esquinas para que combine con el diseño */
 }
-    
+/* 7. TARJETA DE ARTÍCULO CIENTÍFICO */
+.tarjeta-articulo {
+    background-color: #f8fafc; /* Un fondo gris azulado muy suave */
+    border-left: 5px solid #957C3D; /* Línea dorada al costado que denota distinción */
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0; /* Redondea solo las esquinas derechas */
+}
+
+.tarjeta-articulo h3 {
+    margin-top: 0;
+    color: #002349;
+    font-size: 1.3em;
+}
+
+.autores {
+    font-style: italic;
+    color: #4a5568;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+/* El botón de descarga/lectura */
+.boton-articulo {
+    display: inline-block;
+    background-color: #957C3D;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.95em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-articulo:hover {
+    background-color: #002349; /* Al pasar el cursor, cambia al azul del encabezado */
+}
     
