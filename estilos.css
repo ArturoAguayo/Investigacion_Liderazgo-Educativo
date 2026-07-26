@@ -167,4 +167,72 @@ iframe {
 .boton-articulo:hover {
     background-color: #002349; /* Al pasar el cursor, cambia al azul del encabezado */
 }
+    /* 8. DISEÑO RESPONSIVO (Adaptación a Celulares y Tablets) */
+
+/* Reglas para pantallas de tablets y celulares (768px de ancho o menos) */
+@media (max-width: 768px) {
     
+    /* 1. Encabezado: Apilamos los logos y el texto verticalmente */
+    header {
+        flex-direction: column; /* Cambia de fila a columna */
+        text-align: center;
+        padding: 20px 15px;
+        gap: 15px; /* Crea un espacio uniforme entre logos y texto */
+    }
+
+    .header-texto {
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 1.6em; /* Reducimos el título para que quepa sin romper líneas feamente */
+    }
+
+    .logo-encabezado {
+        height: 65px; /* Logos ligeramente más pequeños para no ocupar toda la pantalla */
+    }
+
+    /* 2. Menú: Permite que los botones pasen a la siguiente línea si no caben */
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        padding: 12px 15px; /* Reducimos el relleno de los botones */
+        font-size: 0.95em;
+    }
+
+    /* 3. Contenedor principal: Usamos casi todo el ancho de la pantalla del móvil */
+    main {
+        margin: 15px auto;
+        padding: 20px 15px;
+        width: 92%; /* Deja un margen elegante a los lados en el celular */
+    }
+
+    /* 4. Ajustes a la tabla y tarjetas */
+    iframe {
+        height: 500px; /* Reducimos un poco la altura en celulares para facilitar el desplazamiento */
+    }
+
+    .tarjeta-articulo {
+        padding: 18px 15px;
+    }
+}
+
+/* Reglas especiales para celulares muy pequeños (480px de ancho o menos) */
+@media (max-width: 480px) {
+    
+    /* El menú se convierte en una lista vertical muy cómoda para tocar con el dedo */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria muy suave */
+    }
+
+    header h1 {
+        font-size: 1.4em;
+    }
+}
