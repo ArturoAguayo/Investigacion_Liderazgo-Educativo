@@ -245,5 +245,48 @@ main ul {
 
 main ul li {
     margin-bottom: 8px;
+    /* 9. ESTILOS DE FORMULARIO DE CONTACTO */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo-form label {
+    font-weight: bold;
+    color: #002349;
+    font-size: 0.95em;
+}
+
+.campo-form input,
+.campo-form select,
+.campo-form textarea {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+.campo-form input:focus,
+.campo-form select:focus,
+.campo-form textarea:focus {
+    outline: none;
+    border-color: #2b6cb0;
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.2);
+}
+
+.formulario-contacto button {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+}
 }
 }
